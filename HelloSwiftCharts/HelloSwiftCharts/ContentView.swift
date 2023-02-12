@@ -15,6 +15,9 @@ struct ContentView: View {
                 x: .value("Name", "Cachappa"),
                 y: .value("Sales", 916)
             )
+            BarMark(x: .value("Name", "Injera"),
+                    y: .value("Sales", 850)
+            )
         }
     }
 }
