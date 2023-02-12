@@ -28,6 +28,7 @@ struct LocationsDetailsChart: View {
                         y: .value("Sales", element.sales)
                 )
                 .foregroundStyle(by: .value("City", series.city))
+                .symbol(by: .value("City", series.city))
             }
             
         }
