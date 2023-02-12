@@ -33,6 +33,7 @@ struct LocationsDetailsChart: View {
             
         }
         .padding()
+        .frame(height: 300)
     }
 }
 
