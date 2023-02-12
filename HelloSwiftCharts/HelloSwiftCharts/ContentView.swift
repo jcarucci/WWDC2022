@@ -28,8 +28,8 @@ struct ContentView: View {
     var body: some View {
         Chart(sales) { element in
             BarMark(
-                x: .value("Name", element.name),
-                y: .value("Sales", element.sales)
+                x: .value("Sales", element.sales),
+                y: .value("Name", element.name)
             )
         }
     }
