@@ -8,15 +8,28 @@
 import Charts
 import SwiftUI
 
+struct Pancakes: Identifiable {
+    let name: String
+    let sales: Int
+    
+    var id: String { name }
+}
+
+let sales: [Pancakes] = [
+    .init(name: "Cachapa", sales: 916),
+    .init(name: "Injera", sales: 850),
+    .init(name: "Crepe", sales: 802),
+    .init(name: "Jian Bing", sales: 753),
+    .init(name: "Dosa", sales: 654),
+    .init(name: "American", sales: 618),
+]
+
 struct ContentView: View {
     var body: some View {
-        Chart {
+        Chart(sales) { element in
             BarMark(
-                x: .value("Name", "Cachappa"),
-                y: .value("Sales", 916)
-            )
-            BarMark(x: .value("Name", "Injera"),
-                    y: .value("Sales", 850)
+                x: .value("Name", element.name),
+                y: .value("Sales", element.sales)
             )
         }
     }
