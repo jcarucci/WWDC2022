@@ -15,24 +15,32 @@ enum City {
 
 let sfData: [SalesSummary] = [
     /// Monday
-    .init(weekday: makeDate(2022, 5, 2), sales: 54),
+    .init(weekday: makeDate(2022, 5, 2), sales: 81),
     /// Tuesday
-    .init(weekday: makeDate(2022, 5, 3), sales: 42),
+    .init(weekday: makeDate(2022, 5, 3), sales: 90),
     /// Wednesday
-    .init(weekday: makeDate(2022, 5, 4), sales: 88),
+    .init(weekday: makeDate(2022, 5, 4), sales: 52),
     /// Thursday
-    .init(weekday: makeDate(2022, 5, 5), sales: 49),
+    .init(weekday: makeDate(2022, 5, 5), sales: 72),
     /// Friday
-    .init(weekday: makeDate(2022, 5, 6), sales: 42),
+    .init(weekday: makeDate(2022, 5, 6), sales: 84),
     /// Saturday
-    .init(weekday: makeDate(2022, 5, 7), sales: 125),
+    .init(weekday: makeDate(2022, 5, 7), sales: 84),
     /// Sunday
-    .init(weekday: makeDate(2022, 5, 8), sales: 67)
+    .init(weekday: makeDate(2022, 5, 8), sales: 137)
 ]
 
 struct LocationsToggleChart: View {
     @State var city: City = .cupertino
     
+    var data: [SalesSummary] {
+        switch city {
+        case .cupertino:
+            return cupertinoData
+        case .sanFrancisco:
+            return sfData
+        }
+    }
     
     var body: some View {
         VStack {
@@ -41,7 +49,7 @@ struct LocationsToggleChart: View {
                 Text("San Francisco").tag(City.sanFrancisco)
             }
             .pickerStyle(.segmented)
-            Chart(cupertinoData) { element in
+            Chart(data) { element in
                 BarMark(x: .value("Day", element.weekday),
                         y: .value("Sales", element.sales)
                 )
