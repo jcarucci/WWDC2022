@@ -5,11 +5,33 @@
 //  Created by Jason on 2/12/23.
 //
 
+import Charts
 import SwiftUI
+
+struct Series: Identifiable {
+    let city: String
+    let sales: [SalesSummary]
+    
+    var id: String { city }
+}
+
+let seriesData: [Series] = [
+    Series(city: "Cupertino", sales: cupertinoData),
+    Series(city: "San Francisco", sales: sfData)
+]
 
 struct LocationsDetailsChart: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Chart(seriesData) { series in
+            ForEach(series.sales) { element in
+                BarMark(x: .value("Day", element.weekday),
+                        y: .value("Sales", element.sales)
+                )
+                .foregroundStyle(by: .value("City", series.city))
+            }
+            
+        }
+        .padding()
     }
 }
 
