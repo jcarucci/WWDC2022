@@ -13,6 +13,7 @@
 		96C391A4299944DC0017BC68 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96C391A3299944DC0017BC68 /* Preview Assets.xcassets */; };
 		96C391AB299948D20017BC68 /* CupertinoDetailsChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C391AA299948D20017BC68 /* CupertinoDetailsChart.swift */; };
 		96C391AD29994DF40017BC68 /* LocationsToggleChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C391AC29994DF40017BC68 /* LocationsToggleChart.swift */; };
+		96C391AF29994FF10017BC68 /* LocationsDetailsChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96C391AE29994FF10017BC68 /* LocationsDetailsChart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		96C391A3299944DC0017BC68 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		96C391AA299948D20017BC68 /* CupertinoDetailsChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupertinoDetailsChart.swift; sourceTree = "<group>"; };
 		96C391AC29994DF40017BC68 /* LocationsToggleChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsToggleChart.swift; sourceTree = "<group>"; };
+		96C391AE29994FF10017BC68 /* LocationsDetailsChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsDetailsChart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +41,7 @@
 		96C39190299944DB0017BC68 = {
 			isa = PBXGroup;
 			children = (
+				96C391AE29994FF10017BC68 /* LocationsDetailsChart.swift */,
 				96C3919B299944DB0017BC68 /* HelloSwiftCharts */,
 				96C3919A299944DB0017BC68 /* Products */,
 			);
@@ -146,6 +149,7 @@
 				96C391AB299948D20017BC68 /* CupertinoDetailsChart.swift in Sources */,
 				96C391AD29994DF40017BC68 /* LocationsToggleChart.swift in Sources */,
 				96C3919F299944DB0017BC68 /* ContentView.swift in Sources */,
+				96C391AF29994FF10017BC68 /* LocationsDetailsChart.swift in Sources */,
 				96C3919D299944DB0017BC68 /* HelloSwiftChartsApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
