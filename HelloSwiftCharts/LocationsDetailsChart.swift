@@ -24,7 +24,7 @@ struct LocationsDetailsChart: View {
     var body: some View {
         Chart(seriesData) { series in
             ForEach(series.sales) { element in
-                BarMark(x: .value("Day", element.weekday),
+                PointMark(x: .value("Day", element.weekday),
                         y: .value("Sales", element.sales)
                 )
                 .foregroundStyle(by: .value("City", series.city))
